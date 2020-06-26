@@ -2,18 +2,18 @@
 
 ## Create an Access key for a User
 	
- - Request on CLI	-> aws iam create-access-key --user-name testUser
- - Response Received -> in the JSON Format
+ 	- Request on CLI	-> aws iam create-access-key --user-name testUser
+ 	- Response Received -> in the JSON Format
 
-{
-    "AccessKey": {
-        "UserName": "testUser",
-        "AccessKeyId": "********************",
-        "Status": "Active",
-        "SecretAccessKey": "********************",
-        "CreateDate": "2020-06-26T20:29:51+00:00"
-    }
-}
+			{
+			    "AccessKey": {
+			        "UserName": "testUser",
+			        "AccessKeyId": "********************",
+			        "Status": "Active",
+			        "SecretAccessKey": "********************",
+			        "CreateDate": "2020-06-26T20:29:51+00:00"
+			    }
+			}
 
 Important Points to remember:-
 	- You can get output in Yaml format as well using '--output yaml'
