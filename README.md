@@ -16,3 +16,11 @@ This package includes the classes to Create and Manager Access key for a user
 		- Delete Access key
 		- Activate Access key
 		- Deactivate Access Key
+
+# Package -> com.aws.iam.account.alias
+
+This package includes the code sample to manage aws account alias
+
+# Package -> com.aws.iam.users
+
+This package includes the code samples to manager AWS Users
