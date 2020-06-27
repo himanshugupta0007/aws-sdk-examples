@@ -73,4 +73,90 @@
 		- Request -> aws iam update-access-key --access-key ******************** --status Active --user-name testUser
 		- Response -> If successful you will get no response otherwise an error
 
+# Account Alias Details
+
+## Create account alias
+
+	- Request -> aws iam create-account-alias --alais-name testusernew
+	- Response -> aws iam create-account-alias
+
+## Delete Account Alias
+
+	- Request -> aws iam delete-account-alias --alais-name testusernew
+	- Response -> aws iam delete-account-alias
+
+## List Alias for account
+
+	- Request -> aws iam list-account-alias --alais-name testusernew
+	- Response -> 
+		
+		{
+    		"AccountAliases": [
+        		"trainingusernew"
+    		]
+		}
+
+## Get Account Summary Information
+
+	- Request -> aws iam get-account-summary
+	- Response -> 
+		
+		{
+    		"SummaryMap": {
+        			""
+        		}
+        }
+	
+# User Commands
+
+## List the users for account
+	
+		- Request -> aws iam list-users
+		- Response -> 
+			
+		{
+    		"Users": [
+        		{
+		            "Path": "/",
+		            "UserName": "testUser",
+		            "UserId": "*******************",
+		            "Arn": "*********************",
+		            "CreateDate": "2020-02-11T19:57:58+00:00",
+		            "PasswordLastUsed": "**********************"
+        		}
+    		]
+		}
+
+## To get the user information
+		
+		- Request -> aws iam get-user --user-name awstraininguser
+		- Response ->
+			
+			{
+		    	"User": {
+		        	"Path": "/",
+			        "UserName": "testUser",
+			        "UserId": "*********************O",
+			        "Arn": "arn:aws:iam::327131238009:user/testUser",
+			        "CreateDate": "2020-02-11T19:57:58+00:00",
+			        "PasswordLastUsed": "2020-06-27T19:02:47+00:00",
+			        "Tags": [
+			            		{
+			                		"Key": "user-type",
+			                		"Value": "training-user"
+			            		}
+			    		    ]
+		    			}
+			}
+	
+
+## Create a new user
+
+		- Request -> aws iam get-user --user-name awstraininguser
+
+## Update a user
+		- Request -> aws iam update-user --user-name awstestuser --new-user-name awstestuser1
+
+## Delete a user
+		- Request -> aws iam delete-user --user-name awstestuser1
 	
