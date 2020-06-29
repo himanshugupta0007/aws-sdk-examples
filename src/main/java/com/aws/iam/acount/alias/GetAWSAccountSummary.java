@@ -5,7 +5,7 @@ package com.aws.iam.acount.alias;
 
 import java.util.Map;
 
-import com.aws.iam.utility.AWSIAMUtilty;
+import com.aws.utility.AWSUtilty;
 
 import software.amazon.awssdk.regions.Region;
 import software.amazon.awssdk.services.iam.IamClient;
@@ -23,8 +23,8 @@ public class GetAWSAccountSummary {
 
 	public static void main(String[] args) {
 
-		final Region globalRegion = AWSIAMUtilty.getGlobalRegion();
-		final IamClient iam = AWSIAMUtilty.getIamClientForRegion(globalRegion);
+		final Region globalRegion = AWSUtilty.getGlobalRegion();
+		final IamClient iam = AWSUtilty.getIamClientForRegion(globalRegion);
 		try {
 			GetAccountSummaryResponse accountSummaryResponse;
 			final GetAccountSummaryRequest request = GetAccountSummaryRequest.builder().build();

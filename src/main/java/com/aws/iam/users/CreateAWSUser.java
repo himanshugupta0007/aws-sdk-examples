@@ -3,7 +3,7 @@
  */
 package com.aws.iam.users;
 
-import com.aws.iam.utility.AWSIAMUtilty;
+import com.aws.utility.AWSUtilty;
 
 import software.amazon.awssdk.http.HttpStatusCode;
 import software.amazon.awssdk.regions.Region;
@@ -24,8 +24,8 @@ public class CreateAWSUser {
 	 */
 	public static void main(String[] args) {
 
-		final Region globalRegion = AWSIAMUtilty.getGlobalRegion();
-		final IamClient iam = AWSIAMUtilty.getIamClientForRegion(globalRegion);
+		final Region globalRegion = AWSUtilty.getGlobalRegion();
+		final IamClient iam = AWSUtilty.getIamClientForRegion(globalRegion);
 		try {
 
 			final Tag tags = Tag.builder().key("user-type").value("test-user").build();

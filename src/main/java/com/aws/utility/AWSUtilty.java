@@ -1,7 +1,7 @@
 /**
  * 
  */
-package com.aws.iam.utility;
+package com.aws.utility;
 
 import software.amazon.awssdk.regions.Region;
 import software.amazon.awssdk.services.iam.IamClient;
@@ -10,7 +10,7 @@ import software.amazon.awssdk.services.iam.IamClient;
  * @author himan
  *
  */
-public class AWSIAMUtilty {
+public class AWSUtilty {
 
 	public static Region getGlobalRegion() {
 		return Region.AWS_GLOBAL;

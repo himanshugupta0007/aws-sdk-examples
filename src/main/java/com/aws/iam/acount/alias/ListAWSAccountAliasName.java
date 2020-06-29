@@ -3,7 +3,7 @@
  */
 package com.aws.iam.acount.alias;
 
-import com.aws.iam.utility.AWSIAMUtilty;
+import com.aws.utility.AWSUtilty;
 
 import software.amazon.awssdk.regions.Region;
 import software.amazon.awssdk.services.iam.IamClient;
@@ -22,8 +22,8 @@ public class ListAWSAccountAliasName {
 
 		boolean done = false;
 		String newMarker = null;
-		Region globalRegion = AWSIAMUtilty.getGlobalRegion();
-		IamClient iam = AWSIAMUtilty.getIamClientForRegion(globalRegion);
+		Region globalRegion = AWSUtilty.getGlobalRegion();
+		IamClient iam = AWSUtilty.getIamClientForRegion(globalRegion);
 		try {
 			ListAccountAliasesResponse listAccountAliasResponse;
 			while (!done) {

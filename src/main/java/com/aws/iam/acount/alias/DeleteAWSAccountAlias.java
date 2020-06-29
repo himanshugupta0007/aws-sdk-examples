@@ -3,7 +3,7 @@
  */
 package com.aws.iam.acount.alias;
 
-import com.aws.iam.utility.AWSIAMUtilty;
+import com.aws.utility.AWSUtilty;
 
 import software.amazon.awssdk.http.HttpStatusCode;
 import software.amazon.awssdk.regions.Region;
@@ -29,8 +29,8 @@ public class DeleteAWSAccountAlias {
 	 */
 	public static void main(String[] args) {
 
-		Region globalRegion = AWSIAMUtilty.getGlobalRegion();
-		IamClient iam = AWSIAMUtilty.getIamClientForRegion(globalRegion);
+		Region globalRegion = AWSUtilty.getGlobalRegion();
+		IamClient iam = AWSUtilty.getIamClientForRegion(globalRegion);
 		try {
 			DeleteAccountAliasRequest deleteAccountAliasRequest = DeleteAccountAliasRequest.builder()
 					.accountAlias("awstraininguser").build();

@@ -1,6 +1,6 @@
 package com.aws.iam.users;
 
-import com.aws.iam.utility.AWSIAMUtilty;
+import com.aws.utility.AWSUtilty;
 
 import software.amazon.awssdk.regions.Region;
 import software.amazon.awssdk.services.iam.IamClient;
@@ -20,8 +20,8 @@ public class ListAWSUsers {
 
 		boolean done = false;
 		String newMarker = null;
-		final Region globalRegion = AWSIAMUtilty.getGlobalRegion();
-		final IamClient iam = AWSIAMUtilty.getIamClientForRegion(globalRegion);
+		final Region globalRegion = AWSUtilty.getGlobalRegion();
+		final IamClient iam = AWSUtilty.getIamClientForRegion(globalRegion);
 		ListUsersResponse listUserResponse = null;
 		try {
 			while (!done) {
