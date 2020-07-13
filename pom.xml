@@ -1,10 +1,10 @@
 <project xmlns="http://maven.apache.org/POM/4.0.0" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 https://maven.apache.org/xsd/maven-4.0.0.xsd">
   <modelVersion>4.0.0</modelVersion>
-  <groupId>aws-iam-sdk</groupId>
-  <artifactId>aws-iam-sdk</artifactId>
+  <groupId>aws-ec2-sdk</groupId>
+  <artifactId>aws-ec2-sdk</artifactId>
   <version>0.0.1-SNAPSHOT</version>
-  <name>aws-iam-sdk</name>
-  <description>aws-iam-sdk</description>
+  <name>aws-ec2-sdk</name>
+  <description>aws-ec2-sdk</description>
   
     <properties>
     <project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
@@ -35,6 +35,11 @@
     <dependency>
       <groupId>software.amazon.awssdk</groupId>
       <artifactId>iam</artifactId>
+      <version>2.10.86</version>
+    </dependency>
+    <dependency>
+      <groupId>software.amazon.awssdk</groupId>
+      <artifactId>ec2</artifactId>
       <version>2.10.86</version>
     </dependency>
   </dependencies>
