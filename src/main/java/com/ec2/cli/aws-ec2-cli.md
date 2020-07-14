@@ -54,7 +54,21 @@ Recently terminated instances might appear in the returned results. This interva
         - sriovNetSupport
         - enaSupport
 	  
+## Key Pairs Commands
 
+## Describe\List Key-Pair
+
+    - aws ec2 describe-key-pairs
+    - aws ec2 describe-key-pairs --key-names keyname
+    - aws ec2 describe-key-pairs --key-id keyID
+
+## Create Key-Pair
+
+    - aws ec2 create-key-pair --key-name testKeyPair
+
+## Delete Key-Pair
+    
+    - aws ec2 delete-key-pair --key-name testKeyPair 
 
 
 
